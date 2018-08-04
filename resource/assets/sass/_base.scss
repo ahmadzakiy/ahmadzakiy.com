@@ -1,0 +1,97 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $secondary-color;
+}
+
+.highlight {
+  color: $primary-color;
+  font-weight: 400;
+}
+
+.one {
+  padding-top: 50px;
+  h1 {
+    font-size: 32px;
+    font-weight: 300;
+    color: $primary-color;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    color: $third-color;
+    a {
+      color: $primary-color;
+      font-weight: 400;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0px;
+  padding: 10px 0;
+  border-top: 1px solid $primary-color;
+  background: $secondary-color;
+  width: 100%;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: $third-color;
+  &:hover {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+// ROTATING TEXT CSS
+.text {
+  position: relative;
+  margin-bottom: 75px;
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  -webkit-transform: translateZ(25px);
+  transform: translateZ(25px);
+  -webkit-transform-origin: 50% 50% 25px;
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  -webkit-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transition: -webkit-transform 0.32s
+    cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: -webkit-transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+    -webkit-transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  -webkit-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transition: -webkit-transform 0.38s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: -webkit-transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    -webkit-transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

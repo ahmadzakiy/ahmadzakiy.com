@@ -1,0 +1,16 @@
+/* Color Pallete */
+$primary-color: #ffffff;
+$secondary-color: #000000;
+$third-color: #adadad;
+
+/* Instant Classs */
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
